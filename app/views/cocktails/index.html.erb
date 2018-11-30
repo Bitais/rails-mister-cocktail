@@ -1,0 +1,31 @@
+<div class="banner-home" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.5) 0%, rgba(0,36,61,0.5) 50%), url('https://images.unsplash.com/photo-1542600176-9d2c4bb4bc1a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9aa15c11514f1b68fcfab9f0c06dd58b&auto=format&fit=crop&w=1601&q=80');">
+  <div class="banner-home-content">
+    <h1>Fancy Cocktails</h1>
+    <p>Discover our homemade cocktails</p>
+    <a class="btn btn-primary btn-lg">Check it out</a>
+  </div>
+</div>
+
+<div class="container-cocktails">
+
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-danger"><%= link_to 'Add a new cocktail', new_cocktail_path %></button>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row-cocktails">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4 cocktail-card">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cocktail.photo %>);">
+        <div class="card-category">DELICIOUS</div>
+        <div class="card-description">
+          <h4><%= cocktail.name %></h4>
+          <p><%= link_to "See details", cocktail_path(cocktail), class: "btn btn-info"%></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
