@@ -1,3 +1,7 @@
+.container-show {
+  margin: 15px 200px;
+}
+
 .banner-show {
   color: white;
   text-align: center;
@@ -8,3 +12,11 @@
   align-items: center;
   justify-content: center;
 }
+
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+

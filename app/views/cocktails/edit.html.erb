@@ -9,7 +9,7 @@
 
     <div class="form-group">
       <%= f.label :photo %>
-      <%= f.text_field :photo, class: 'form-control' %>
+      <%= f.text_field :photo_cache, as: :hidden, class: 'form-control' %>
     </div>
 
     <%= f.submit class: 'btn btn-primary' %>
